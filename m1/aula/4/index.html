@@ -8,13 +8,15 @@
    <script>
        function retornaSexo(sexo) {
 
-           if (sexo == 'F') {
+           if (sexo === 'F') {
             return 'Feminino';
-           } else {
-               return 'Masculino'
+           } else if (sexo === 'M'){
+               return 'Masculino';
+           }  else {
+               return 'Outro';
            }
        }
-           var resultado = retornaSexo('F');
+           var resultado = retornaSexo('M');
            console.log(resultado);
    </script>
 </body>
