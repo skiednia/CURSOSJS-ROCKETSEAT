@@ -7,8 +7,12 @@
    
    <script>
        function retornaSexo(sexo) {
-           //M, F
-           //Masculino, Feminino
+
+           if (sexo == 'F') {
+            return 'Feminino';
+           } else {
+               return 'Masculino'
+           }
        }
            var resultado = retornaSexo('F');
            console.log(resultado);
