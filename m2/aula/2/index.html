@@ -10,9 +10,12 @@
         <button class="botao">Adicionar</button>
     </div>
     <script>
-       var inputElemnt = document.querySelector('input[name=nome]');
+       var btnElement = document.querySelector('button.botao');
 
-       console.log(inputElemnt);
+    btnElement.onclick = function() {
+        alert('Botão Clicado');
+        
+    }
     </script>
 </body>
 </html>
