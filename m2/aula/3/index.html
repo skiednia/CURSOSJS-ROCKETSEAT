@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="app">
-        
+        <input id="nome"/>
     </div>
 
     <script>
@@ -19,6 +19,9 @@
 
       var containerElement = document.querySelector('#app');
       containerElement.appendChild(linkElemnt);
+
+      var inputElemnt = document.querySelector('#nome');
+      containerElement.removeChild(inputElement);
 
     </script>
 </body>
