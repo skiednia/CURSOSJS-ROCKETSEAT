@@ -9,16 +9,15 @@
         <input type="text" name="nome"/>
         <button class="botao">Adicionar</button>
     </div>
-    <script>
-       var inputElement = document.querySelector('input[name=nome]');
-       var btnElement = document.querySelector('button.botao');
 
-        btnElement.onclick = function() {
-        var text = inputElement.value;
-        
-        alert(text);
-        
-    }
+    <script>
+      var linkElemnt = document.createElement('a');
+
+      linkElemnt.setAttribute('href', 'https://www.youtube.com/watch?v=sGcHPAUxDfM');
+
+      var textElement = document.createTextNode('Stream em Deeply by Matheus Who');
+      linkElemnt.appendChild(textElement);
+
     </script>
 </body>
 </html>
