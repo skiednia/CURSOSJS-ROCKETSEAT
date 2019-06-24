@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Exercicio 1</title>
+        <meta charset="UTF-8">
+        <title>Exercicio 1</title>
 </head>
-<body>
-
-    <div id="quadrados"> </div>
+    <body>
     
+        <div id="quadrados"> </div>
+
     <button id="a">Criar um novo quadrado</button>
 
     <script>
        var bntElement = document.getElementById('a');
        var quadradosElement = document.getElementById('quadrados');
-       
-       function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-
        bntElement.onclick = function () {
            var quadrado = document.createElement('div');
-
+       
            quadrado.style.width = '100px';
            quadrado.style.height = '100px';
            quadrado.style.backgroundColor = '#f00';
-
+           
            quadradosElement.appendChild(quadrado);
        };
     </script>
 </body>
 </html>
-
-// 
-   }
-   var newColor = getRandomColor(); // #E943F0
