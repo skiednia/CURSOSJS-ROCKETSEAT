@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Exercicio 2</title>
+  <title>Exercício 02</title>
 </head>
+
 <body>
 
-    <div id="quadrados"> </div>
-    
-    <button id="a">Criar um novo quadrado</button>
+  <div id="quadrados"></div>
 
-    <script>
-       var bntElement = document.getElementById('a');
-       var quadradosElement = document.getElementById('quadrados');
-       
-       function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
+<button id="a">Criar um novo quadrado</button>
+  <script>
+    var btnElement = document.getElementById('a');
+    var quadradosElement = document.getElementById('quadrados');
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-       };
-
-       bntElement.onclick = function () {
-           var quadrado = document.createElement('div');
-
-           quadrado.style.width = '100px';
-           quadrado.style.height = '100px';
-           quadrado.style.backgroundColor = '#f00';
-
-          quadrado.onmouseover function() {
-            var quadrado.style.backgroundColor = getRandomColor();
-            
-        }
-    
-           quadradosElement.appendChild(quadrado);
-       };
-    </script>
+      }
+      return color;
+    }
+    btnElement.onclick = function () {
+      var quadrado = document.createElement('div');
+      quadrado.style.width = '100px';
+      quadrado.style.height = '100px';
+      quadrado.style.backgroundColor = '#F00';
+      quadrado.onmouseover = function () {
+        quadrado.style.backgroundColor = getRandomColor();
+      }
+      quadradosElement.appendChild(quadrado);
+    };
+  </script>
 </body>
+
 </html>
