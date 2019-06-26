@@ -6,13 +6,19 @@ var buttonElement =
 document.querySelector("#app button");
 
 var todos = [
-    'fazer café',
-    'beber gasolina',
-    'jogar o canudo no lixo'
+    'Fazer café',
+    'Beber gasolina',
+    'Jogar o canudo no lixo'
 ];
 
   function renderTodos() {
       for(todo of todos) {
-          
+        var todoElement = document.createElement('li');
+        var todoText = document.createTextNode(todo);
+
+        todoElement.appendChild(todoText);
+        listElement.appendChild(todoElement);
       }
   }
+
+  renderTodos();
