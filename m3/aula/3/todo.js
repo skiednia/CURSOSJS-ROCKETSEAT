@@ -1,14 +1,12 @@
-var listElement = 
-document.querySelector("#app ul");
-var inputElement = 
-document.querySelector("#app input");
-var buttonElement = 
-document.querySelector("#app button");
+var listElement = document.querySelector("#app ul");
+var inputElement = document.querySelector("#app input");
+var buttonElement = document.querySelector("#app button");
 
 var todos = [
     'Fazer café',
     'Beber gasolina',
-    'Jogar o canudo no lixo'
+    'Jogar o canudo no lixo',
+    'Matar gamer'
 ];
 
   function renderTodos() {
