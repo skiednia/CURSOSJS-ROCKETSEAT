@@ -22,6 +22,9 @@ var todos = [
 
         linkElement.setAttribute('href', '#');
 
+        var pos = todos.indexOf(todo);
+        linkElement.setAttribute('onclick', 'deleteTodo(' + pos +')');
+
         todoElement.appendChild(todoText);
         todoElement.appendChild(linkElement);
 
@@ -41,7 +44,7 @@ var todos = [
 
   };
 
-  buttonElement.onclick = addTodo
+  buttonElement.onclick = addTodo;
 
   function deleteTodo(pos) {
     todos.splice(pos, 1);
