@@ -25,4 +25,8 @@ var todos = [
 
   function adcTodo() {
     var todoText = inputElement.value;
+
+    todos.push(todoText);
+    inputElement.value = '';
+    renderTodos();
   }
