@@ -41,6 +41,7 @@ var todos = [
     todos.push(todoText);
     inputElement.value = '';
     renderTodos();
+    saveToStorage();
 
   };
 
@@ -49,6 +50,11 @@ var todos = [
   function deleteTodo(pos) {
     todos.splice(pos, 1);
     renderTodos();
+    saveToStorage();
+  }
+
+  function saveToStorage() {
+    localStorage.setItem('list_Todos', JSON.stringify(todos));
     
   }
   
