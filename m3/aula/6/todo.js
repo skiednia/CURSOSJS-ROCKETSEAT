@@ -2,12 +2,7 @@ var listElement = document.querySelector("#app ul");
 var inputElement = document.querySelector("#app input");
 var buttonElement = document.querySelector("#app button");
 
-var todos = [
-    'Fazer café ',
-    'Beber gasolina ',
-    'Jogar o canudo no lixo ',
-    'Matar gamer '
-];
+var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
   function renderTodos() {
     listElement.innerHTML = '';
