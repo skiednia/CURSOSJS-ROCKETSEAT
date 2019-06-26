@@ -3,10 +3,10 @@ var inputElement = document.querySelector("#app input");
 var buttonElement = document.querySelector("#app button");
 
 var todos = [
-    'Fazer café',
-    'Beber gasolina',
-    'Jogar o canudo no lixo',
-    'Matar gamer'
+    'Fazer café ',
+    'Beber gasolina ',
+    'Jogar o canudo no lixo ',
+    'Matar gamer '
 ];
 
   function renderTodos() {
@@ -18,7 +18,13 @@ var todos = [
         var linkElement = document.createElement('a');
         var linkText = document.createTextNode('Excluir');
 
+        linkElement.appendChild(linkText);
+
+        linkElement.setAttribute('href', '#');
+
         todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+
         listElement.appendChild(todoElement);
       }
   }
@@ -36,4 +42,10 @@ var todos = [
   };
 
   buttonElement.onclick = addTodo
+
+  function deleteTodo(pos) {
+    todos.splice(pos, 1);
+    renderTodos();
+    
+  }
   
