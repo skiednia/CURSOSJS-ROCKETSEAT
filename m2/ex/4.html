@@ -7,18 +7,20 @@
 <body>
     <ul></ul>
     
+    <input type="text" name="nome">
+    <button onclick="adicionar()">Adicionar novo</button>
+
     <script>
         var nomes = ["Diego", "Gabriel", "Lucas"];
         var listElement = document.querySelector('ul');
+        var inputElement = document.querySelector('input');
 
-        for (nome of nomes) {
-            var liElement = document.createElement('li');
-            var textElement = document.createTextNode(nome);
-
-            liElement.appendChild(textElement);
-            listElement.appendChild(liElement);
-        }
-    
+        function addItem(text) {
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(text);
+      liElement.appendChild(textElement);
+      listElement.appendChild(liElement);
+    }
     </script>
     
 </body>
