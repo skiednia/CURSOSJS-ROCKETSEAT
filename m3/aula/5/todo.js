@@ -44,7 +44,7 @@ var todos = [
 
   };
 
-  buttonElement.onclick = addTodo;
+  buttonElement.onClick = addTodo;
 
   function deleteTodo(pos) {
     todos.splice(pos, 1);
