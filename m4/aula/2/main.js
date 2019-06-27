@@ -16,5 +16,6 @@ var aPromise = function() {
     });
 }
 
-var resultado = aPromise();
-console.log(resultado);
+aPromise()
+  .then(function(response) {})
+  .catch(function(error) {});
