@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
   
@@ -38,14 +38,23 @@
 
       loadingElement.appendChild(textElement);
       listElement.appendChild(loadingElement);
+     
+    }
     
     function listRepositories() {
       var user = inputElement.value;
       if (!user) return;
+
+      renderLoading();
+
+
       axios.get('https://api.github.com/users/' + user + '/repos')
         .then(function (response) {
           renderRepositories(response.data);
         })
+        .catch(function () {
+          renderError();
+        });
     }
 
     
