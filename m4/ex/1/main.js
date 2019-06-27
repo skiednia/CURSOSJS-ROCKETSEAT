@@ -5,7 +5,7 @@ function checaIdade(idade) {
         }, 2000);
     });
    }
-   checaIdade(12)
+   checaIdade(22)
     .then(function() {
     console.log("Maior que 18");
     })
