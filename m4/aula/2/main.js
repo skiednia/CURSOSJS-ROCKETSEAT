@@ -17,5 +17,10 @@ var aPromise = function() {
 }
 
 aPromise()
-  .then(function(response) {})
-  .catch(function(error) {});
+  .then(function(response) {
+      console.log(response)
+  })
+    
+  .catch(function(error) {
+      console.warn(error)
+  });
