@@ -4,6 +4,17 @@ var aPromise = function() {
         xhr.open('GET', 'https://api.github.com/users/skiednia');
         xhr.send(null);
 
-        
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4) {
+                if(xhr.status === 200) {
+                    resolve(JSON.parse(xhr.responseText));
+                } else {
+                    reject('Erro na requisição');
+                }
+            }
+        }
     });
 }
+
+var resultado = aPromise();
+console.log(resultado);
